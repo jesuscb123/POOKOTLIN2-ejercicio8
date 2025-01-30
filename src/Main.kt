@@ -1,14 +1,20 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
-    }
+
+fun main(){
+    val conjuntoLibros1 = ConjuntoLibros()
+    val libro1 = Libro("IT", "Stephen KING",100,5)
+    val libro2 = Libro("Cien años de soledad","Gabriel García Márquez",600,10)
+
+    val libro3 = Libro("1984", "George Orwell",400,9)
+
+
+    conjuntoLibros1.añadirLibro(libro1)
+    conjuntoLibros1.añadirLibro(libro2)
+    conjuntoLibros1.eliminarLibro(libro1.titulo)
+    conjuntoLibros1.eliminarLibro(libro2.autor)
+    conjuntoLibros1.añadirLibro(libro3)
+    conjuntoLibros1.mostrarLibros()
+
+
+
 }
